@@ -17,8 +17,8 @@ public class FilmeController {
     private InFilmeService filmeService;
 
     @GetMapping
-    public ResponseEntity<List<Filme>> findAll(@RequestParam(required = false) int id, String nome, int ano ){
-        List<Filme> list = filmeService.findAll(id,nome,ano);
+    public ResponseEntity<List<Filme>> findAll(@RequestParam(required = false)String nome){
+        List<Filme> list = filmeService.findAll(nome);
         return ResponseEntity.ok().body(list);
     }
 
@@ -33,9 +33,6 @@ public class FilmeController {
         return new ResponseEntity(id, HttpStatus.ACCEPTED);
     }
 
-    @PutMapping
-    public ResponseEntity update(@RequestBody final Filme filme){
-       return new filmeService.update(filme);
-    }
+
 
 }

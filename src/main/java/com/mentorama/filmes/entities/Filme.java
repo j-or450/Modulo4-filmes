@@ -7,7 +7,7 @@ public class Filme {
     private int ano;
     private int nota;
 
-    public Filme(int id, String nome, String nomeDiretor, int ano, int nota) {
+    public Filme(Integer id, String nome, String nomeDiretor, int ano, int nota) {
         this.id = id;
         this.nome = nome;
         this.nomeDiretor = nomeDiretor;
@@ -15,11 +15,11 @@ public class Filme {
         this.nota = nota;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
