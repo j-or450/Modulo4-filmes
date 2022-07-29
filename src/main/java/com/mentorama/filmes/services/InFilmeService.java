@@ -9,5 +9,5 @@ public interface InFilmeService {
 
     public Filme findById(Integer id);
 
-    Integer add(final Filme filme);
+    Filme add(final Filme filme);
 }

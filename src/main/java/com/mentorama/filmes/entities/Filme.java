@@ -1,7 +1,7 @@
 package com.mentorama.filmes.entities;
 
 public class Filme {
-    private int id;
+    private Integer id;
     private String nome;
     private String nomeDiretor;
     private int ano;

@@ -23,16 +23,14 @@ public class FilmeController {
     }
 
     @GetMapping("/{id}")
-    public Filme findById(@PathVariable("id") Integer id) {
-        return filmeService.findById(id);
+    public ResponseEntity<Filme> findByAll(@PathVariable("id") Integer id) {
+        Filme fi = filmeService.findById(id);
+        return ResponseEntity.ok().body(fi);
     }
 
     @PostMapping
-    public ResponseEntity<Integer> add(@RequestBody final Filme filme){
-        Integer id = filmeService.add(filme);
-        return new ResponseEntity(id, HttpStatus.ACCEPTED);
+    public ResponseEntity<Filme> add(@RequestBody final Filme filme){
+        Filme fi = filmeService.add(filme);
+        return ResponseEntity.ok().body(fi);
     }
-
-
-
 }
