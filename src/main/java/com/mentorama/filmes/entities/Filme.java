@@ -3,14 +3,14 @@ package com.mentorama.filmes.entities;
 public class Filme {
     private Integer id;
     private String nome;
-    private String nomeDiretor;
+    private String nomeDir;
     private int ano;
     private int nota;
 
-    public Filme(Integer id, String nome, String nomeDiretor, int ano, int nota) {
+    public Filme(Integer id, String nome, String nomeDir, int ano, int nota) {
         this.id = id;
         this.nome = nome;
-        this.nomeDiretor = nomeDiretor;
+        this.nomeDir = nomeDir;
         this.ano = ano;
         this.nota = nota;
     }
@@ -31,12 +31,12 @@ public class Filme {
         this.nome = nome;
     }
 
-    public String getNomeDiretor() {
-        return nomeDiretor;
+    public String getNomeDir() {
+        return nomeDir;
     }
 
-    public void setNomeDiretor(String nomeDiretor) {
-        this.nomeDiretor = nomeDiretor;
+    public void setNomeDir(String nomeDir) {
+        this.nomeDir = nomeDir;
     }
 
     public int getAno() {

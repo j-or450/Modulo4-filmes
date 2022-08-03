@@ -3,7 +3,6 @@ package com.mentorama.filmes.controllers;
 import com.mentorama.filmes.entities.Filme;
 import com.mentorama.filmes.services.InFilmeService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,9 +22,8 @@ public class FilmeController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Filme> findByAll(@PathVariable("id") Integer id) {
-        Filme fi = filmeService.findById(id);
-        return ResponseEntity.ok().body(fi);
+    public Filme findByAll(@PathVariable("id") Integer id) {
+        return filmeService.findById(id);
     }
 
     @PostMapping
